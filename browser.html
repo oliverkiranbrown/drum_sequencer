@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>	
+		<meta charset="utf-8" />
+		<title>Simple HTML</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- LOAD Tone.js from unpkg -->
+		<script src="https://unpkg.com/tone"></script>
+		<!-- Link to your external script -->
+		<script src="arpeggiator.js" defer></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.32/Tone.min.js"></script>
+		<script>
+			function play_drum() {
+				const synth = new Tone.Synth().toDestination();
+				const now = Tone.now();
+				// trigger the attack immediately
+				synth.triggerAttack("C1", now);
+				// wait one second before triggering the release
+				synth.triggerRelease(now + 0.01);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Simple HTML5 Tone.js Demo</h1>
+		<button onclick="play_drum()">Click me to play note!</button>
+	</body>
+</html>
