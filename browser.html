@@ -1,17 +1,30 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>	
 		<meta charset="utf-8" />
-		<title>Simple HTML</title>
+		<title>Drum Sequencer</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- LOAD Tone.js from unpkg -->
-		<script src="https://unpkg.com/tone"></script>
-		<!-- Link to your external script -->
-		<script src="arpeggiator.js" defer></script>
-		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.32/Tone.min.js"></script>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<h1>Simple HTML5 Tone.js Demo</h1>
-		<button onclick="test_seq()">Click me to play note!</button>
+		<h1>16-Step Drum Machine</h1>
+		<div id="particles-js"></div>
+		<div id="sequencer">
+			<div class="row" id="kick-row"></div>
+			<div class="row" id="snare-row"></div>
+			<div class="row" id="closed_hat-row"></div>
+			<div class="row" id="open_hat-row"></div>
+		</div>
+		<label for="bpm">BPM: <span id="bpm-value">120</span></label>
+		<input type="range" id="bpm" min="60" max="200" value="120">
+		<div>
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+			<button id="clear-grid">Clear</button>
+			<button id="new-pattern">Groove</button>
+		</div>
+
+		<script src="https://unpkg.com/tone"></script>
+		<script src="sequencer.js" defer></script>
 	</body>
 </html>
