@@ -2,19 +2,17 @@
    Global Styles
    ======================= */
    :root {
-    --primary: #1d4ed8;
-    --primary-hover: #2563eb;
-    --secondary: #e85d00;
+    --primary: #6ead02; 
+    --primary-hover: #a6c570;
+    --secondary: white;
     --bg: #f3f4f6;
-    --text: #111827;
+    --text: #f3f4f6;
 }
 
 body {
     font-family: 'fantasy', sans-serif;
     padding: 20px;
-    background-color: var(--bg);
-    color: var(--text);
-    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-color: #3e610061;
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
 }
@@ -80,6 +78,14 @@ body {
 
 .step:hover {
     transform: scale(1.05);
+}
+
+h1 {
+    color: white;
+}
+
+label {
+    color: white;
 }
 
 /* =======================
@@ -157,14 +163,4 @@ label {
     gap: 10px;
     font-weight: 500;
     margin-top: 20px;
-}
-
-#particles-js {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Modern palette */
 }

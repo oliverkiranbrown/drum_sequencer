@@ -157,6 +157,7 @@ document.getElementById("start").addEventListener("click", async () => {
 // make the stop button work
 document.getElementById("stop").addEventListener("click", async () => {
     loop.stop(0);
+    Tone.Transport.pause()
 });
 
 // make the bpm slider 
@@ -180,3 +181,31 @@ document.getElementById("new-pattern").addEventListener("click", () => {
 window.addEventListener("DOMContentLoaded", () => {
     load_pattern(predefinedPatterns[0]); // load the first pattern automatically
 });
+
+// make the background change
+const colors = [
+    "#5C2C1D", // Deep mahogany
+    "#8B2F1C", // Deep russet red
+    "#B04E39", // Brick red
+    "#D85C41", // Maple leaf
+    "#F28C5B", // Persimmon
+    "#E27A3F", // Pumpkin
+    "#C94C24", // Burnt orange
+    "#9E4F21", // Cinnamon bark
+    "#A66E16", // Caramel brown
+    "#C98C43", // Honeyed oak
+    "#E1A95F", // Toasted almond
+    "#FFD27F", // Golden amber
+    "#F2B179", // Warm apricot
+    "#D99A25", // Harvest gold
+    "#7C5832", // Walnut brown
+    "#6E3B1F"  // Chestnut
+  ]
+let i = 0;
+
+function updateBackground() {
+  document.body.style.backgroundColor = colors[i % colors.length];
+  i++;
+}
+
+Tone.Transport.scheduleRepeat(updateBackground, "4n"); // every measure
