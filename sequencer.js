@@ -208,4 +208,5 @@ function updateBackground() {
   i++;
 }
 
-Tone.Transport.scheduleRepeat(updateBackground, "4n"); // every measure
+// turn off the background switch for now! Very intense!!!
+//Tone.Transport.scheduleRepeat(updateBackground, "4n"); // every measure

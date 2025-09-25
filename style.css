@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: 'fantasy', sans-serif;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
     padding: 20px;
     background-color: #3e610061;
     background-size: 400% 400%;
@@ -39,6 +39,10 @@ h1 {
     flex-direction: column;
     gap: 10px;
     margin: 0 auto;
+    align-items: center;            /* center the entire sequencer horizontally */
+    border: 1px solid black;      /* white border around the sequencer */
+    border-radius: 12px;            /* rounded corners */
+    padding: 20px;
 }
 
 body {
@@ -52,7 +56,14 @@ body {
 
 .row {
     display: flex;
+    align-items: center;
     gap: 4px;
+}
+
+.row-label {
+    width: 87px;       /* fixed width for all labels */
+    margin-right: 8px;
+    color: white;      /* adjust to match your theme */
 }
 
 .step {
@@ -93,6 +104,7 @@ label {
    ======================= */
 button {
     background-color: var(--primary);
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
     color: white;
     border: none;
     border-radius: 8px;
@@ -129,7 +141,7 @@ input[type=range] {
     outline: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    transition: background 0.2s ease;
+    transition: 0.2s ease;
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -141,7 +153,7 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    transition: background 0.2s ease, transform 0.1s ease;
+    transition: 0.2s ease, transform 0.1s ease;
 }
 
 input[type=range]::-webkit-slider-thumb:hover {
@@ -164,3 +176,10 @@ label {
     font-weight: 500;
     margin-top: 20px;
 }
+
+#bg-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    display: block;
+  }
