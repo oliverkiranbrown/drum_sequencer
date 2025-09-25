@@ -150,6 +150,7 @@ document.getElementById("clear-grid").addEventListener("click", () => {
 // make the start button work
 document.getElementById("start").addEventListener("click", async () => {
     await Tone.start();
+    step = 0;
     loop.start(0);
     Tone.Transport.start();
 });
