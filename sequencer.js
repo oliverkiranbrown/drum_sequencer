@@ -1,5 +1,5 @@
 // Set the base URL for the drum samples to be triggered
-let base_url = "https://oliverkiranbrown.github.io/public/samples/";
+let base_url = "https://oliverkiranbrown.com/public/samples/";
 let sequencer;
 
 // define the instrument by linking the variable names to mp3 files
